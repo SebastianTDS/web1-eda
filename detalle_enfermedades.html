@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/detalle_enfermedades.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/header-footer.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/nav.css'>
+    <title>Detalles COVID-19</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/iconos/logo.png">
+        <span class="logo">
+            Logo
+        </span>
+        <form action="listado_enfermedades.html" method="GET">
+            <input list="enfermedades" name="enfermedad" id="enfermedad" class="buscador">
+            <datalist id="enfermedades">
+                <option value="COVID-19">
+                <option value="Dengue">
+                <option value="Gripe A">
+                <option value="Hepatitis B">
+                <option value="Neumonia">
+            </datalist>
+            <input type="image" src="img/iconos/search.png" class="icono">
+        </form>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="listado_enfermedades.html">ENFERMEDADES</a></li>
+            <li><a href="vacunas.html">VACUNACION</a></li>
+            <li><a href="hospitales.html">HOSPITALES</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <main>
+        <span class="titular_princ titular">COVID-19</span>
+        <div class="portada">
+            <img src="img/covid.jpg">
+            <p>
+                La COVID-19 (acrónimo del inglés coronavirus
+                disease 2019), en español conocida como enfermedad por coronavirus 2019 e incorrectamente como
+                neumonía por coronavirus,​ es una enfermedad infecciosa causada por el virus SARS-CoV-2.
+
+                Produce síntomas similares a los de la gripe o catarro, entre los que se incluyen fiebre, tos,
+                disnea, mialgia y fatiga. En casos graves se caracteriza por producir neumonía, síndrome de
+                dificultad respiratoria aguda,​ sepsis​ y choque séptico que conduce a cerca de 3,75 % de los
+                infectados a la muerte según la OMS.​ No existe tratamiento específico; las medidas terapéuticas
+                principales consisten en aliviar los síntomas y mantener las funciones vitales.
+            </p>
+        </div>
+        <span class="titular">FORMULARIO DE DETECCIÓN (TEST) DE CORONAVIRUS (COVID-19)</span>
+        <section>
+            <div>
+                <p>
+                    Hola usuario! Si tienes sintomas de COVID-19 o has estado en contacto con una persona afectada
+                    deberias hacer un control y seguimiento diario de tus sintomas.
+                </p>
+                <p>
+                    Esta aplicación te permitira hacer un seguimiento de la evolución de los sintomas y te dará las
+                    indicaciones y consejos a seguir en cada caso.
+                    El uso de este servicio supone la aceptación de los terminos y politica de privacidad descritos en
+                    <a href="#">Ver las condiciones y políticas</a>
+                </p>
+                <span class="subtitulo">SINTOMAS</span>
+                <div class="grid">
+                    <img src="img/24-fiebre-dolor-garganta.png">
+                    <img src="img/25-fiebre-dificultad-respirar.png">
+                    <img src="img/23-fiebre-tos.png" class="c">
+                </div>
+            </div>
+            <form action="#" method="POST">
+                <ul>
+                    <li class="join">
+                        <label for="nma">Nombre y apellido</label>
+                        <input type="text" id="nma" name="nma" required>
+                    </li>
+                    <li>
+                        <label for="dni">DNI</label>
+                        <label for="tel">Teléfono</label>
+                        <input type="number" id="dni" name="dni" required>
+                        <input type="tel" id="tel" name="tel" required>
+                    </li>
+                    <li>
+                        <label for="cdd">Ciudad</label>
+                        <span>Sexo</span>
+                        <input type="text" name="cdd" id="cdd" required>
+
+                        <div>
+                            <input type="radio" name="sxo" id="sxoF" value="F" required>
+                            <label for="sxoF">F</label>
+                            <input type="radio" name="sxo" id="sxoM" value="M" required>
+                            <label for="sxoM">M</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>¿Has viajado al exterior de la republica Argentina?</span>
+                        <div>
+                            <input type="radio" name="ve?" id="ve?Y" value="Y" required>
+                            <label for="ve?Y">Si</label>
+                            <input type="radio" name="ve?" id="ve?N" value="N" required>
+                            <label for="ve?N">No</label>
+                        </div>
+                    </li>
+                    <li class="join">
+                        <div>
+                            <label for="pv?">Paises visitados</label>
+                            <select name="pv" id="pv?">
+                                <option value=""></option>
+                                <option value="pais2">Ejemplo pais 2</option>
+                                <option value="pais3">Ejemplo pais 3</option>
+                                <option value="pais4">Ejemplo pais 4</option>
+                                <option value="pais5">Ejemplo pais 5</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="negrita">Por favor, indica los sintomas que presentas:</span>
+                    </li>
+                    <li>
+                        <span>¿Tuviste fiebre mayor a 38 grados?</span>
+                        <div>
+                            <input type="radio" name="38?" id="38?Y" value="Y" required>
+                            <label for="38?Y">Si</label>
+                            <input type="radio" name="38?" id="38?N" value="N" required>
+                            <label for="38?N">No</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>¿Tuviste Dolor de cabeza?</span>
+                        <div>
+                            <input type="radio" name="dc?" id="dc?Y" value="Y" required> 
+                            <label for="dc?Y">Si</label>
+                            <input type="radio" name="dc?" id="dc?N" value="N" required>
+                            <label for="dc?N">No</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>¿Tuviste una tos persistente?</span>
+                        <div>
+                            <input type="radio" name="tp?" id="tp?Y" value="Y" required>
+                            <label for="tp?Y">Si</label>
+                            <input type="radio" name="tp?" id="tp?N" value="N" required>
+                            <label for="tp?N">No</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>¿Tuviste Dolor de garganta?</span>
+                        <div>
+                            <input type="radio" name="dg?" id="dg?Y" value="Y" required>
+                            <label for="dg?Y">Si</label>
+                            <input type="radio" name="dg?" id="dg?N" value="N" required>
+                            <label for="dg?N">No</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>¿Tuviste dificultad para respirar?</span>
+                        <div>
+                            <input type="radio" name="dr?" id="dr?Y" value="Y" required>
+                            <label for="dr?Y">Si</label>
+                            <input type="radio" name="dr?" id="dr?N" value="N" required>
+                            <label for="dr?N">No</label>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="drc">Dirección</label>
+                        <label for="cd2">Ciudad</label>
+                        <input type="text" name="drc" id="drc" required>
+                        <input type="text" name="cd2" id="cd2" required>
+                    </li>
+                    <li>
+                        <input type="submit" value="ENVIAR TEST" class="submit">
+                    </li>
+                </ul>
+            </form>
+        </section>
+        <span class="titular">MEDIDAS DE PRECAUCIÓN</span>
+        <div class="prevencion">
+            <img src="img/14-lavarse-manos.png">
+            <img src="img/15-estornudar.png">
+            <img src="img/16-tocar-nariz.png">
+            <img src="img/17-ventilar.png">
+            <img src="img/18-limpiar-objetos.png">
+            <img src="img/19-permanecer-domicilio.png">
+            <img src="img/20-reducir-contacto.png">
+            <img src="img/21-no-compartir-mate.png">
+        </div>
+        <span class="titular">HOSPITAL MÁS CERCANO ESPECIALIZADO EN LA ENFERMEDAD</span>
+        <div class="mapa">
+            <ul>
+                <li><span class="subtitulo">NOMBRE HOSPITAL</span></li>
+                <li>Tel.</li>
+                <li>Direccion</li>
+                <li>Ciudad</li>
+                <li><img src="img/hospital.jpg"></li>
+            </ul>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13119.660299970945!2d-58.5333857!3d-34.7073219!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5052a953205c954!2sHospital%20Dr.%20Alberto%20Balestrini!5e0!3m2!1ses!2sar!4v1602546143543!5m2!1ses!2sar"
+                frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <span>Datos del grupo</span>
+            <li>Jonatan Rodriguez - 41.235.511</li>
+            <li>Luciano Enrique Scaglia - 39.464.154</li>
+            <li>Sebastian Javier Trillo Da Silva - 41.130.458</li>
+        </ul>
+        <ul>
+            <span>Menu inferior</span>
+            <li><a href="listado_enfermedades.html">Enfermedades</a></li>
+            <li><a href="vacunas.html">Vacunas</a></li>
+            <li><a href="hospitales.html">Hospitales</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div>
+            <span>Redes Sociales</span>
+            <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img src="img/iconos/instagram.png"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/iconos/facebook.png"></a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><img src="img/iconos/twitter.png"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

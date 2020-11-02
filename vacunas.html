@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/vacunas.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/header-footer.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/nav.css'>
+    <title>Calendario Vacunacion</title>
+</head>
+<body>
+    <header>
+        <img src="img/iconos/logo.png">
+        <span class="logo">
+            Logo
+        </span>
+        <form action="listado_enfermedades.html" method="GET">
+            <input list="enfermedades" name="enfermedad" id="enfermedad" class="buscador">
+            <datalist id="enfermedades">
+                <option value="COVID-19">
+                <option value="Dengue">
+                <option value="Gripe A">
+                <option value="Hepatitis B">
+                <option value="Neumonia">
+            </datalist>
+            <input type="image" src="img/iconos/search.png" class="icono">
+        </form>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="listado_enfermedades.html">ENFERMEDADES</a></li>
+            <li><a href="vacunas.html">VACUNACION</a></li>
+            <li><a href="hospitales.html">HOSPITALES</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="relleno">
+
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <span>Datos del grupo</span>
+            <li>Jonatan Rodriguez - 41.235.511</li>
+            <li>Luciano Enrique Scaglia - 39.464.154</li>
+            <li>Sebastian Javier Trillo Da Silva - 41.130.458</li>
+        </ul>
+        <ul>
+            <span>Menu inferior</span>
+            <li><a href="listado_enfermedades.html">Enfermedades</a></li>
+            <li><a href="vacunas.html">Vacunas</a></li>
+            <li><a href="hospitales.html">Hospitales</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div>
+            <span>Redes Sociales</span>
+            <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img src="img/iconos/instagram.png"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/iconos/facebook.png"></a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><img src="img/iconos/twitter.png"></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+main .icono2{
+    background-color: unset;
+    top: 10px;
+    left: 65px;
+    z-index: 1;
+    opacity: 50%;
+}
+
+main .icono2:hover{
+    background-color: unset;
+    opacity: 100%;
+}
+
+
+.buscador2{
+    padding-left: 30px;
+    background-color: rgb(221, 223, 221);
+    border-radius: 5px;
+    border: rgb(82, 82, 82) 2px solid;
+}
+
+main form{
+    display: block;
+    text-align: center;
+}
+
+.titular{
+    font-weight: 600;
+    text-align: center;
+    color: rgb(77, 109, 46);
+    font-size: 26px;
+    display: block;
+    margin-top: 15px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px;
+    text-align: justify;
+}
+
+section article{
+    margin: 15px;
+}
+
+section p{
+    max-height: 116px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+section span{
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    text-indent: 3px;
+    margin-bottom: 5px;
+}
+
+section article img{
+    float: left;
+    margin-right: 15px;
+    border-radius: 5px;
+    width: 250px;
+    height: 150px;
+}
+
+section a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(125, 175, 74);
+    color: white;
+    padding: 4px 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+section a:hover{
+    background-color: rgb(77, 109, 46);
+}

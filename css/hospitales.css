@@ -1,0 +1,15 @@
+.titular{
+    font-weight: 600;
+    text-align: center;
+    color: rgb(77, 109, 46);
+    font-size: 36px;
+    display: block;
+    margin: 25px 0;
+}
+
+iframe{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 65px;
+    margin-top: 20px;
+}

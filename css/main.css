@@ -1,0 +1,100 @@
+#carrousel{
+    margin: 10px 0;
+    background-color: rgb(202, 202, 202);
+    padding: 10px 0;
+    text-align: center;
+}
+
+#carrousel img{
+    vertical-align: middle;
+    margin: 0 15px;
+}
+
+#carrousel .flecha:hover{
+    margin:0 3px;
+    width: 60px;
+    height: 60px;
+}
+
+.portada{
+    width: 50%;
+}
+
+.titular{
+    font-weight: bold;
+    text-align: center;
+    color: rgb(77, 109, 46);
+    font-size: 32px;
+    display: block;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-column-gap: 40px;
+    justify-content: center;
+}
+
+section div{
+    margin: 40px 0;
+    text-align: center;
+}
+
+section div a{
+    text-decoration: none;
+    color:white;
+}
+
+.ajusteImagen{
+    width: 50%;
+    min-width: 80px;
+}
+
+a .boton{
+    display: block;
+    border-radius: 3px;
+    padding: 10px 0;
+    margin: 0 auto;
+    max-width: 250px;
+    font-weight: bolder;
+    background-color: rgb(149, 224, 73);
+    color:white;
+}
+
+a .boton:hover{
+    background-color: rgb(77, 109, 46);
+}
+
+#numero{
+    background-color: rgb(125, 175, 74);
+    color:white;
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 45px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#numero div{
+    margin: 0 5%;
+    color:white;
+}
+
+#numero span{
+    display: block;
+    font-size: 7vw;
+    font-weight: bolder;
+    color:white;
+}
+
+#numero img{
+   width: 100%;
+}
+
+@media (max-width: 720px){
+    section{
+        grid-template-columns: 90%;
+    }
+}
