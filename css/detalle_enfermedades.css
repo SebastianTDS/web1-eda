@@ -164,6 +164,71 @@ main form ul input, select{
     max-height: 320px;
 }
 
+.popup{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    overflow: auto;
+    
+}
+
+.cartel{
+    position: absolute;
+    z-index: 2;
+    top: 1%; left: 10%; right: 10%; bottom: 2%;
+    margin: auto;
+    background-color: white;
+    width: 80%;
+    max-width: 750px;
+    max-height: 250px;
+    border-radius: 7px;
+    border:1px solid rgb(53, 52, 52);
+    overflow: auto;
+}
+
+.cartel p{
+    text-align: center;
+    font-weight: bold;
+    margin: 0 20px 15px 20px;
+}
+
+.cartel ul li{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 40% 10%;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.cartel span{
+    font-weight: bolder;
+}
+
+.cartel button{
+   background-color: white;
+   color: rgb(209, 23, 23);
+   font-weight: bolder;
+   font-size: 20px;
+   padding: 1px 7px 3px 7px;
+   margin: 3px;
+   border-radius: 10px;
+   border: none;
+   position: relative;
+   left: 92%;
+}
+
+.cartel button:hover, .cartel button:focus{
+    background-color: rgb(209, 23, 23);
+    color: white;
+    border:none;
+    outline: none;
+}
+
 @media (max-width: 720px){
     section{
         grid-template-columns: 90%;
@@ -173,4 +238,8 @@ main form ul input, select{
         grid-template-columns: 50% 50%;
     }
 
+    .cartel ul li{
+        grid-template-columns: 80%;
+    }
 }
+

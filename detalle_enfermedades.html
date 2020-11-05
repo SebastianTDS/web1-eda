@@ -7,6 +7,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/detalle_enfermedades.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/header-footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/nav.css'>
+    <script src="js/envioFormulario.js"></script>
     <title>Detalles COVID-19</title>
 </head>
 
@@ -73,36 +74,36 @@
                     <img src="img/23-fiebre-tos.png" class="c">
                 </div>
             </div>
-            <form action="#" method="POST">
+            <form action="#" method="POST" id="enviarForm">
                 <ul>
                     <li class="join">
                         <label for="nma">Nombre y apellido</label>
-                        <input type="text" id="nma" name="nma" required>
+                        <input type="text" id="nma" name="nma">
                     </li>
                     <li>
                         <label for="dni">DNI</label>
                         <label for="tel">Teléfono</label>
-                        <input type="number" id="dni" name="dni" required>
-                        <input type="tel" id="tel" name="tel" required>
+                        <input type="number" id="dni" name="dni">
+                        <input type="tel" id="tel" name="tel">
                     </li>
                     <li>
                         <label for="cdd">Ciudad</label>
                         <span>Sexo</span>
-                        <input type="text" name="cdd" id="cdd" required>
+                        <input type="text" name="cdd" id="cdd">
 
                         <div>
-                            <input type="radio" name="sxo" id="sxoF" value="F" required>
+                            <input type="radio" name="sxo" id="sxoF" value="F">
                             <label for="sxoF">F</label>
-                            <input type="radio" name="sxo" id="sxoM" value="M" required>
+                            <input type="radio" name="sxo" id="sxoM" value="M">
                             <label for="sxoM">M</label>
                         </div>
                     </li>
                     <li>
                         <span>¿Has viajado al exterior de la republica Argentina?</span>
                         <div>
-                            <input type="radio" name="ve?" id="ve?Y" value="Y" required>
+                            <input type="radio" name="ve?" id="ve?Y" value="Y">
                             <label for="ve?Y">Si</label>
-                            <input type="radio" name="ve?" id="ve?N" value="N" required>
+                            <input type="radio" name="ve?" id="ve?N" value="N">
                             <label for="ve?N">No</label>
                         </div>
                     </li>
@@ -122,55 +123,55 @@
                         <span class="negrita">Por favor, indica los sintomas que presentas:</span>
                     </li>
                     <li>
-                        <span>¿Tuviste fiebre mayor a 38 grados?</span>
+                        <span id="P0">¿Tuviste fiebre mayor a 38 grados?</span>
                         <div>
-                            <input type="radio" name="38?" id="38?Y" value="Y" required>
+                            <input type="radio" name="38?" id="38?Y" value="Y">
                             <label for="38?Y">Si</label>
-                            <input type="radio" name="38?" id="38?N" value="N" required>
+                            <input type="radio" name="38?" id="38?N" value="N">
                             <label for="38?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste Dolor de cabeza?</span>
+                        <span id="P1">¿Tuviste Dolor de cabeza?</span>
                         <div>
-                            <input type="radio" name="dc?" id="dc?Y" value="Y" required> 
+                            <input type="radio" name="dc?" id="dc?Y" value="Y"> 
                             <label for="dc?Y">Si</label>
-                            <input type="radio" name="dc?" id="dc?N" value="N" required>
+                            <input type="radio" name="dc?" id="dc?N" value="N">
                             <label for="dc?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste una tos persistente?</span>
+                        <span id="P2">¿Tuviste una tos persistente?</span>
                         <div>
-                            <input type="radio" name="tp?" id="tp?Y" value="Y" required>
+                            <input type="radio" name="tp?" id="tp?Y" value="Y">
                             <label for="tp?Y">Si</label>
-                            <input type="radio" name="tp?" id="tp?N" value="N" required>
+                            <input type="radio" name="tp?" id="tp?N" value="N">
                             <label for="tp?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste Dolor de garganta?</span>
+                        <span id="P3">¿Tuviste Dolor de garganta?</span>
                         <div>
-                            <input type="radio" name="dg?" id="dg?Y" value="Y" required>
+                            <input type="radio" name="dg?" id="dg?Y" value="Y">
                             <label for="dg?Y">Si</label>
-                            <input type="radio" name="dg?" id="dg?N" value="N" required>
+                            <input type="radio" name="dg?" id="dg?N" value="N">
                             <label for="dg?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste dificultad para respirar?</span>
+                        <span id="P4">¿Tuviste dificultad para respirar?</span>
                         <div>
-                            <input type="radio" name="dr?" id="dr?Y" value="Y" required>
+                            <input type="radio" name="dr?" id="dr?Y" value="Y">
                             <label for="dr?Y">Si</label>
-                            <input type="radio" name="dr?" id="dr?N" value="N" required>
+                            <input type="radio" name="dr?" id="dr?N" value="N">
                             <label for="dr?N">No</label>
                         </div>
                     </li>
                     <li>
                         <label for="drc">Dirección</label>
                         <label for="cd2">Ciudad</label>
-                        <input type="text" name="drc" id="drc" required>
-                        <input type="text" name="cd2" id="cd2" required>
+                        <input type="text" name="drc" id="drc">
+                        <input type="text" name="cd2" id="cd2">
                     </li>
                     <li>
                         <input type="submit" value="ENVIAR TEST" class="submit">
