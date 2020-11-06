@@ -169,26 +169,25 @@ main form ul input, select{
     z-index: 1;
     bottom: 0;
     right: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    opacity: 0.5;
     overflow: auto;
     
 }
 
 .cartel{
     position: absolute;
+    display: block;
     z-index: 2;
-    top: 1%; left: 10%; right: 10%; bottom: 2%;
-    margin: auto;
+    top: 20%; left: 10%; right: 10%;
+    margin: 0 auto 15% auto;
+    padding-bottom: 15px;
     background-color: white;
     width: 80%;
     max-width: 750px;
-    max-height: 250px;
     border-radius: 7px;
     border:1px solid rgb(53, 52, 52);
-    overflow: auto;
 }
 
 .cartel p{
@@ -227,6 +226,17 @@ main form ul input, select{
     color: white;
     border:none;
     outline: none;
+}
+
+.cartel a{
+    cursor: default;
+    margin-left: 5%;
+    color: rgb(8, 8, 228);
+    text-decoration: underline;
+}
+
+.cartel a:hover{
+    color:rgb(23, 139, 247);
 }
 
 @media (max-width: 720px){

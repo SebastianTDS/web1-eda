@@ -27,30 +27,35 @@ function crearCasillaMensaje() {
     var mensaje = document.createElement("p");
     var listadesordenada = document.createElement("ul");
     var botonCerrar = document.createElement("button");
+    var vinculo = document.createElement('a');
     var temp = localStorage.getItem('datos');
 
     botonCerrar.innerHTML = "X";
+    vinculo.innerHTML = "Mostrar más";
+    listadesordenada.hidden = true;
     textContainer.setAttribute("class", "cartel");
     mainContainer.setAttribute("class", "popup");
     document.body.setAttribute("style", "overflow: hidden");
     mensaje.innerHTML = "El formulario fue completado correctamente. " + (temp.split('true').length - 1)
-        + " síntomas de COVID-19 fueron registrados:"
-
+    + " síntomas de COVID-19 fueron registrados:"
+    
     for (var i = 0; i < 5; i++) {
         var pregunta = document.getElementById("P" + i).innerHTML;
         var respuesta = temp.split(',')[i] == "true" ? "Si" : "No";
         var item = document.createElement("li");
-
+        
         item.innerHTML = pregunta + "<span>" + respuesta + "</span>";
         listadesordenada.appendChild(item);
     }
-
-    botonCerrar.addEventListener('click', function () { cerrarVentana(textContainer, mainContainer) });
     
+    botonCerrar.addEventListener('click', function () { cerrarVentana(textContainer, mainContainer) });
+    vinculo.addEventListener('click', function () { mostrar(vinculo, listadesordenada) })
+
     textContainer.appendChild(botonCerrar);
     textContainer.appendChild(mensaje);
+    textContainer.appendChild(vinculo);
     textContainer.appendChild(listadesordenada);
-    document.body.appendChild(textContainer);
+    mainContainer.appendChild(textContainer);
     document.body.appendChild(mainContainer);
 
 
@@ -59,7 +64,16 @@ function crearCasillaMensaje() {
 
 function cerrarVentana(a, b) {
     a.remove();
-    console.log(a);
     b.remove();
     document.body.removeAttribute("style");
+}
+
+function mostrar(a, b){
+    if(a.innerHTML == "Mostrar más"){
+        a.innerHTML = "Mostrar menos";
+        b.hidden = false;
+    }else{
+        a.innerHTML = "Mostrar más";
+        b.hidden = true;
+    }
 }
