@@ -41,6 +41,7 @@ function validar() {
 
     /* Muestra los mensajes de error */
     if (error == false) {
+        registrarSintomas();
         return true;
     } else {
         document.getElementById("mensajes").innerHTML = mensajesError;

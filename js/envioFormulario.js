@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     localStorage.removeItem('mensaje');         //- Elimina mensaje del almacenamiento local
 
-    var submit = document.getElementById("enviarForm");
-
-    submit.onsubmit = function () { registrarSintomas(); };  // Llama un metodo al enviar el formulario
 });
 
 // Guarda las respuestas "Si" de los sintomas y una validación de envio para cuando se recargue la pagina 
