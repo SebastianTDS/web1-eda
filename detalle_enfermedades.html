@@ -8,6 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/header-footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/nav.css'>
     <script src="js/detalle_enfermedades.js"></script>
+    <script src="js/envioFormulario.js"></script>
 
     <title>Detalles COVID-19</title>
 </head>
@@ -76,12 +77,13 @@
                 </div>
             </div>
 
-            <form action="#" method="POST" onsubmit="return validar()">
+            <form action="#" method="POST" onsubmit="return validar()" id="enviarForm">
                 <!-- *El atributo "onsubmit" se va a ejecutar luego de que el usuario ingrese los datos. 
                      *El "return" delante de la función validar() lo pondremos para que no refresque 
                       la página, es decir, que no se envie el formulario en el caso de que la función 
                       retorne falso (return false).
                      *Con javascript crearemos una función que sirva para validar los datos ingresados. -->
+
                 <ul>
                     <li class="join">
                         <label for="nma">Nombre y apellido</label>
@@ -108,6 +110,7 @@
                     <li>
                         <span>¿Has viajado al exterior de la republica Argentina?</span>
                         <div>
+                          
                             <!-- Agregamos el evento "onchange" para validar los campos -->
                             <input type="radio" name="ve?" id="ve?Y" value="Y"
                                 onchange="ocultarMostrar('ve?','paises_visitados')">
@@ -135,44 +138,52 @@
                         <span class="negrita">Por favor, indica los sintomas que presentas:</span>
                     </li>
                     <li>
-                        <span>¿Tuviste fiebre mayor a 38 grados?</span>
+                        <span id="P0">¿Tuviste fiebre mayor a 38 grados?</span>
                         <div>
+
                             <input type="radio" name="38?" id="38?Y" value="Y" onchange="validarSintomas('38?')">
                             <label for="38?Y">Si</label>
                             <input type="radio" name="38?" id="38?N" value="N" onchange="validarSintomas('38?')">
+
                             <label for="38?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste Dolor de cabeza?</span>
+                        <span id="P1">¿Tuviste Dolor de cabeza?</span>
                         <div>
                             <input type="radio" name="dc?" id="dc?Y" value="Y" onchange="validarSintomas('dc?')">
                             <label for="dc?Y">Si</label>
                             <input type="radio" name="dc?" id="dc?N" value="N" onchange="validarSintomas('dc?')">
+
                             <label for="dc?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste una tos persistente?</span>
+                        <span id="P2">¿Tuviste una tos persistente?</span>
                         <div>
+
                             <input type="radio" name="tp?" id="tp?Y" value="Y" onchange="validarSintomas('tp?')">
                             <label for="tp?Y">Si</label>
                             <input type="radio" name="tp?" id="tp?N" value="N" onchange="validarSintomas('tp?')">
+
                             <label for="tp?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste Dolor de garganta?</span>
+                        <span id="P3">¿Tuviste Dolor de garganta?</span>
                         <div>
+
                             <input type="radio" name="dg?" id="dg?Y" value="Y" onchange="validarSintomas('dg?')">
                             <label for="dg?Y">Si</label>
                             <input type="radio" name="dg?" id="dg?N" value="N" onchange="validarSintomas('dg?')">
+
                             <label for="dg?N">No</label>
                         </div>
                     </li>
                     <li>
-                        <span>¿Tuviste dificultad para respirar?</span>
+                        <span id="P4">¿Tuviste dificultad para respirar?</span>
                         <div>
+
                             <!-- Agregamos el evento "onchange" para validar los campos -->
                             <input type="radio" name="dr?" id="dr?Y" value="Y" onchange="validarSintomas('dr?'), ocultarMostrar('dr?','direccion')">
                             <label for="dr?Y">Si</label>

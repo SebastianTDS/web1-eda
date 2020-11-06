@@ -71,3 +71,80 @@ iframe{
         grid-template-columns: 80%;
     }
 }
+
+/*----validaciones del formuario------*/
+label{
+    cursor:pointer;
+}
+
+.formulario__input{
+    border: 3px solid transparent;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus{
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.formulario__input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display:none;
+}
+
+.formulario__input-error-activo{
+    display:block;
+}
+
+.formulario__mensaje{
+    background: #f66060;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+
+.submit{
+    transition: .1s ease all;
+}
+.submit:hover{
+    box-shadow: 3px 0px 30px rgba(163,163,163,1)
+}
+
+.formulario__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo{
+display: block;
+}
+
+/*----- Estilo para la validacion-------*/
+
+.formulario__grupo-incorrecto label{
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__input{
+    border: 3px solid #bb2929;
+
+}
+
+/*----contador de caracteres-----*/
+#txtVista{
+    padding-right: 20%;
+    text-align: right;
+}

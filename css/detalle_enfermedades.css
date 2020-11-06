@@ -173,6 +173,81 @@ main form ul input, select{
     max-height: 320px;
 }
 
+.popup{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+}
+
+.cartel{
+    position: absolute;
+    display: block;
+    z-index: 2;
+    top: 20%; left: 10%; right: 10%;
+    margin: 0 auto 15% auto;
+    padding-bottom: 15px;
+    background-color: white;
+    width: 80%;
+    max-width: 750px;
+    border-radius: 7px;
+    border:1px solid rgb(53, 52, 52);
+}
+
+.cartel p{
+    text-align: center;
+    font-weight: bold;
+    margin: 0 20px 15px 20px;
+}
+
+.cartel ul li{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 40% 10%;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.cartel span{
+    font-weight: bolder;
+}
+
+.cartel button{
+   background-color: white;
+   color: rgb(209, 23, 23);
+   font-weight: bolder;
+   font-size: 20px;
+   padding: 1px 7px 3px 7px;
+   margin: 3px;
+   border-radius: 10px;
+   border: none;
+   position: relative;
+   left: 92%;
+}
+
+.cartel button:hover, .cartel button:focus{
+    background-color: rgb(209, 23, 23);
+    color: white;
+    border:none;
+    outline: none;
+}
+
+.cartel a{
+    cursor: default;
+    margin-left: 5%;
+    color: rgb(8, 8, 228);
+    text-decoration: underline;
+}
+
+.cartel a:hover{
+    color:rgb(23, 139, 247);
+}
+
 @media (max-width: 720px){
     section{
         grid-template-columns: 90%;
@@ -180,4 +255,9 @@ main form ul input, select{
     .prevencion{
         grid-template-columns: 50% 50%;
     }
+
+    .cartel ul li{
+        grid-template-columns: 80%;
+    }
 }
+
