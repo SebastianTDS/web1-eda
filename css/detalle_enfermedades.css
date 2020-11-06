@@ -89,7 +89,16 @@ main form ul li label{
     margin-right: 10px;
 }
 
-.join{
+
+.oculto{     
+    display: none;
+}
+
+.error p{       
+    color: crimson;    
+}
+
+.join{        
     grid-template-columns: 100%;
 }
 
@@ -168,9 +177,7 @@ main form ul input, select{
     section{
         grid-template-columns: 90%;
     }
-
     .prevencion{
         grid-template-columns: 50% 50%;
     }
-
 }
