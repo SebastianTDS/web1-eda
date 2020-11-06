@@ -40,67 +40,74 @@
     <main>
         <div class="formulario">
             <ul>
-                <form action="contacto.html" method="GET" id="formulario">
+                <form action="#" method="GET" id="formulario">
                     <li class="titular2 titular">CONTACTO</li>
 
                     <!--grupo usuario-->
-                  <div class="formulario__grupo" id="grupo__usuario">
-                    <li><label for="user">Nombre y apellido</label></li>
+                    <div class="formulario__grupo" id="grupo__usuario">
+                        <li><label for="user">Nombre y apellido</label></li>
 
-                    <div class="formulario__grupo-input">
-                    	<li><input type="text" class="formulario__input" id="user" name="user" placeholder=" Ej: John Lennon">
-                    	</li>
-                	</div>
-                	<p class="formulario__input-error">Solo puede contener letras y espacios.</p>
-                  </div>
-
-                	<!--grupo correo Electronico-->
-                	<div class="formulario__grupo" id="grupo__correo">
-                    <li><label for="email">Correo electronico</label></li>
-
-                    <div class="formulario__grupo-input">
-                    	<li><input class="formulario__input" type="email" name="email" id="email" placeholder=" Ej: correo@correo.com" >
-                    	</li>
-                    </div>	
-                    	<p class="formulario__input-error"> El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.
-                    	</p>
+                        <div class="formulario__grupo-input">
+                            <li><input type="text" class="formulario__input" id="user" name="user"
+                                    placeholder=" Ej: John Lennon">
+                            </li>
+                        </div>
+                        <p class="formulario__input-error">Solo puede contener letras y espacios.</p>
                     </div>
 
-                	<!--Grupo telefono-->
-                	<div class="formulario__grupo" id="grupo__telefono">
-                    <li><label for="telefono">Telefono</label></li>
+                    <!--grupo correo Electronico-->
+                    <div class="formulario__grupo" id="grupo__correo">
+                        <li><label for="email">Correo electronico</label></li>
 
-                    <div class="formulario__grupo-input">
-                    	<li><input class="formulario__input" type="text" name="telefono" id="telefono" placeholder=" XX XXXX-XXXX" >
-                    	</li>
-                    </div>	
-                    	<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 digitos.</p>
+                        <div class="formulario__grupo-input">
+                            <li><input class="formulario__input" type="email" name="email" id="email"
+                                    placeholder=" Ej: correo@correo.com">
+                            </li>
+                        </div>
+                        <p class="formulario__input-error"> El correo solo puede contener letras, numeros, puntos,
+                            guiones y guion bajo.
+                        </p>
                     </div>
 
-                	<!--Grupo asunto-->
-                	<div class="formulario__grupo" id="grupo__usuario">
-                    <li><label for="coment">Consulta</label></li>
+                    <!--Grupo telefono-->
+                    <div class="formulario__grupo" id="grupo__telefono">
+                        <li><label for="telefono">Telefono</label></li>
 
-                    <div class="formulario__grupo-input">
-                    	<li><textarea name="coment" id="coment" class="formulario__input" rows="10" placeholder=" Ingrese texto" maxlength="1000"></textarea></li>
+                        <div class="formulario__grupo-input">
+                            <li><input class="formulario__input" type="text" name="telefono" id="telefono"
+                                    placeholder=" XX XXXX-XXXX">
+                            </li>
+                        </div>
+                        <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 10
+                            digitos.</p>
                     </div>
-                	</div>
-                	<div id="txtVista"></div>
+
+                    <!--Grupo asunto-->
+                    <div class="formulario__grupo">
+                        <li><label for="coment">Consulta</label></li>
+
+                        <div class="formulario__grupo-input">
+                            <li><textarea name="coment" id="coment" class="formulario__input" rows="10"
+                                    placeholder=" Ingrese texto"></textarea></li>
+                        </div>
+                    </div>
+                    <div id="txtVista"></div>
 
                     <!--Mensaje de error-->
                     <div class="formulario__mensaje" id="formulario__mensaje">
-                    	<p>
-                    		<b>Erorr</b>
-                    		Por favor rellene el formulario.
-                    	</p>
+                        <p>
+                            <b>Erorr</b>
+                            Por favor rellene el formulario.
+                        </p>
                     </div>
 
                     <!--Grupor enviar-->
                     <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    	
-                    	<li><input type="submit" value="enviar" id="enviar" class="submit"></li>
-                    	<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!.</p>
-                   	</div>
+
+                        <li><input type="submit" value="enviar" id="enviar" class="submit"></li>
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado
+                            exitosamente!.</p>
+                    </div>
                 </form>
             </ul>
             <ul>
@@ -112,7 +119,8 @@
                 <li>Web</li>
                 <li>
                     <div>
-                        <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img src="img/iconos/instagram.png"></a>
+                        <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img
+                                src="img/iconos/instagram.png"></a>
                         <a href="https://www.facebook.com/" target="_blank"><img src="img/iconos/facebook.png"></a>
                         <a href="https://twitter.com/?lang=es" target="_blank"><img src="img/iconos/twitter.png"></a>
                     </div>

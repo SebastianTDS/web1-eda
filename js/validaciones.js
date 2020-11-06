@@ -3,10 +3,8 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	usuario: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	//usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{2}\s?\d{4}\-?\d{4,4}$/ // 7 a 14 numeros.
-	
+	telefono: /^(\d{0}|\d{2})\s?\d{4}\-?\d{4,4}$/ // 8 a 12 numeros.
 }
 
 const campos = {
@@ -60,15 +58,15 @@ const validarFormulario = (e) => {
 
 
 inputs.forEach((input) => {
-	input.addEventListener('keyup', validarFormulario);
+	input.addEventListener('keydown', validarFormulario);
 	input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
+// Si el formulario esta validado se envia sino muestra un mensaje de error
+formulario.addEventListener('submit', function(e) {
 	e.preventDefault();
 
-	if(campos.usuario && campos.correo && campos.telefono ){
-		formulario.reset();
+	if(campos.usuario && campos.correo && campos.telefono){
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 
 		setTimeout(() => {
@@ -76,6 +74,7 @@ formulario.addEventListener('submit', (e) => {
 		}, 5000);
 
 	}  else {
+		formulario.reset();
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 
 		setTimeout(() => {
@@ -96,11 +95,10 @@ function innerHTML(id,result){
 
 function contadorCaracteres(){
 	setInterval(function(){
+		document.getElementById('coment').maxLength = 1000;
 		var c = getID("coment");
-		if (c.length>=1000){
-			innerHTML("txtVista","1000/1000");
-		}else{
-			innerHTML("txtVista",c.length);
-		}
+		innerHTML("txtVista", (1000 - c.length) + " Caracteres restantes");
+		campos['comentario'] = true;
+		
 	},0000);
 }
