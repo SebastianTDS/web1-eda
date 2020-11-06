@@ -64,8 +64,15 @@ inputs.forEach((input) => {
 
 // Si el formulario esta validado se envia sino muestra un mensaje de error
 formulario.onsubmit = function (e) {
+	if (campos.usuario && campos.correo && campos.telefono) {
+		formulario.reset();
+		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 
-	if(!campos.usuario || !campos.correo || !campos.telefono){
+		setTimeout(() => {
+			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+		}, 5000);
+
+	} else {
 		e.preventDefault();
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 
