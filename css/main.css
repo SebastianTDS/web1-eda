@@ -1,13 +1,11 @@
 #carrousel{
     margin: 10px 0;
-    background-color: rgb(202, 202, 202);
     padding: 10px 0;
     text-align: center;
 }
 
 #carrousel img{
     vertical-align: middle;
-    margin: 0 15px;
 }
 
 #carrousel .flecha:hover{
