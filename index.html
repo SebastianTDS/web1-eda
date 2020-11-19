@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <link rel="stylesheet" href="Css/nivo-slider.css"/>
+    <link rel="stylesheet" href="Css/default.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/iconos/logo_ico.ico">
     <title>Salud PW1</title>
 </head>
 
@@ -29,11 +34,17 @@
           </form>
     </header>
     <main>
+        <!------------- carrusel dinamico ---------------->
         <div id="carrousel">
-            <a href="#"><img src="img/iconos/left.png" class="flecha"></a>
-            <a href="#"><img src="img/covid.jpg" class="portada"></a>
-            <a href="#"><img src="img/iconos/right.png" class="flecha"></a>
+            <article class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                    <a href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public"><img src="img/1.jpg" alt="COVID-19" title="Orientacion para el publico sobre el COVID-19."/></a>
+                    <a href="https://www.who.int/topics/dengue/es/"><img src="img/2.jpg" alt="DENGUE" title="Informacion general sobre el Dengue."/></a>
+                    <a href="https://medlineplus.gov/spanish/hepatitisb.html"><img src="img/3.jpg" alt="Hepatitis B" title="Informacion general sobre la hepatitis B" /></a>
+                </div>
+            </article>
         </div>
+        <!--------------------------------------------------->
         <span class="titular"> Aprenda sobre el COVID-19 </span>
         <section>
             <div>
