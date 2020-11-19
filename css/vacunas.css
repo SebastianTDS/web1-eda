@@ -1,3 +1,31 @@
-.relleno{
-    height: 368px;
+h1{
+    text-align: center;
+    font-size: 40px;    
 }
+
+#calendar{
+    padding: 10px;
+    max-width: 1000px;
+    margin: auto;        
+}
+
+.fc-title {
+    color: white;
+    font-size: 15px;
+}
+
+.fc-day-header span{
+    color: white;
+}
+
+.fc-day-header{    
+    background-color:rgb(125, 175, 74);      
+}
+
+
+
+
+
+
+
+
