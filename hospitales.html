@@ -8,6 +8,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/header-footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/nav.css'>
     <link rel="shortcut icon" type="image/x-icon" href="img/iconos/logo_ico.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/jquery.modal.js"></script>
     <title>Mapa de hospitales</title>
 </head>
 
@@ -43,8 +45,68 @@
         <div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d210015.40265856034!2d-58.69921656069125!3d-34.667563848504734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospital!5e0!3m2!1ses!2sar!4v1602629371899!5m2!1ses!2sar"
-                frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" id="mapa"></iframe>
         </div>
+        <span class="subtitulo">Hospitales con Cuidados Intensivos</span>
+        <!-- Pop-ups embebidos en el html, se ocultan hasta que sean invocados -->
+        <div id="hsp1" class="modal">
+            <p>Hospital Donación Francisco Santojanni</p>
+            <ul>
+                <li class="bold">Dirección:</li>
+                <li>Pilar 950</li>
+                <li class="bold">Código Postal:</li>
+                <li>C1408INH 
+                    Capital Federal
+                </li>
+                <li class="bold">Teléfono:</li>
+                <li>011 4630-5500</li>
+                <li><a href="https://www.facebook.com/HospitalDonacionFranciscoSantojanni/" target="_blank" class="enlace">Ir a la pagina web</a></li>
+                <li><button id="verMapa" class="boton" value="0"> Ver en Mapa</button></li>
+            </ul>
+        </div>
+
+        <div id="hsp2" class="modal">
+            <p>Hospital Italiano de Buenos Aires</p>
+            <ul>
+                <li class="bold">Dirección:</li>
+                <li>Pres. Tte. Gral. Juan Domingo Perón 4190</li>
+                <li class="bold">Código Postal:</li>
+                <li>C1199 
+                    Capital Federal
+                </li>
+                <li class="bold">Teléfono:</li>
+                <li>011 4959-0200</li>
+                <li><a href="http://www.hospitalitaliano.org.ar/" target="_blank" class="enlace">Ir a la pagina web</a></li>
+                <li><button id="verMapa" class="boton" value="1"> Ver en Mapa</button></li>
+            </ul>
+        </div>
+
+        <div id="hsp3" class="modal">
+            <p>Hospital Dr. Alberto Balestrini</p>
+            <ul>
+                <li class="bold">Dirección:</li>
+                <li>Av. Monseñor Bufano, Ruta 4 Camino De Cintura Y Ruta 21</li>
+                <li class="bold">Código Postal:</li>
+                <li>B1778 Cdad. Evita
+                    Pcia. Buenos Aires
+                </li>
+                <li class="bold">Teléfono:</li>
+                <li>011 4620-2305</li>
+                <li><a href="https://www.facebook.com/hbalestrini/" target="_blank" class="enlace">Ir a la pagina web</a></li>
+                <li><button id="verMapa" class="boton" value="2"> Ver en Mapa</button></li>
+            </ul>
+        </div>
+
+        <!-- Vinculos encargados de disparar los pop-ups -->
+        <ul>
+            <li>Hospital Donacion Francisco Santojanni</li> 
+            <li><a href="#hsp1" rel="modal:open">Ver info</a></li> 
+            <li>Hospital Italiano de Buenos Aires</li>
+            <li><a href="#hsp2" rel="modal:open">Ver info</a></li>
+            <li>Hospital Dr. Alberto Balestrini</li>
+            <li><a href="#hsp3" rel="modal:open">Ver info</a></li>
+        </ul>
+        
     </main>
     <footer>
         <ul>
